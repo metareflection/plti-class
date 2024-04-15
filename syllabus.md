@@ -16,9 +16,9 @@ Teaching Fellow: Raffi Sanna (<a href="mailto:rsanna@g.harvard.edu">rsanna@g.har
 
 ## Course description
 
-In this graduate seminar, we will look at advanced topics in programming languages, design and implementation.
+In this graduate seminar, we will look at advanced topics in programming languages by learning how to implement the theory rules in a paper.
 
-Topics include relational programming, reflection, metacircular interpreters, reflective towers of interpreters, collapsing towers of interpreters, neurosymbolic interpreters, belief graphs, ...
+Topics include CLP(Set), type systems, synthesis, ...
 
 Students will work on assignments and a final project.
 Each student will also present a paper and lead the discussion for one session.
