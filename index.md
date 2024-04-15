@@ -1,4 +1,4 @@
-# Advanced Topics in Programming Languages
+# Programming Language Theory Implementation
 
 - **Assignments:**
 - **Paper Presentation & Discussion:**
