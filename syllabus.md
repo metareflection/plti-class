@@ -8,7 +8,7 @@ Class meeting time: TR 11:15 – 12:30
 
 Class meeting room: SEC 1.307
 
-Course website: [https://class.metareflection.club](https://class.metareflection.club)
+Course website: [https://plti.metareflection.club](https://plti.metareflection.club)
 
 Instructor: [Nada Amin](https://namin.seas.harvard.edu) (<a href="mailto:namin@seas.harvard.edu">namin@seas.harvard.edu</a>)
 
