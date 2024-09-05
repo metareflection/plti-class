@@ -40,8 +40,28 @@ As a staring point, see the [SIGPLAN blogpost on reflective towers](https://blog
 
 #### Algebraic Effects
 
-- [A bibliography maintained by Yallop](https://github.com/yallop/effects-bibliography)
-- [ICFP'21](https://www.microsoft.com/en-us/research/publication/generalized-evidence-passing-for-effect-handlers/): Xie and Leijen, _Generalized Evidence Passing for Effect Handlers (or, Efficient Compilation of Effect Handlers to C)_.
+##### Tutorials
+
+- ["An Introduction to Algebraic Effects and Handlers" by Matija Pretnar](https://www.eff-lang.org/handlers-tutorial.pdf)
+- ["Handlers in Action" by Ohad Kammar, Sam Lindley and Nicolas Oury](https://homepages.inf.ed.ac.uk/slindley/papers/handlers.pdf)
+
+##### Theoretical Foundations
+
+- ["What's Algebraic about Algebraic Effects and Handlers?" by Andrej Bauer](https://arxiv.org/pdf/1807.05923): Good starting paper for those not intimately familiar with category theory and abstract algebra
+- ["Semantics for Algebraic Operations" by Gordon Plotkin and John Power](https://homepages.inf.ed.ac.uk/gdp/publications/sem_alg_ops.pdf): Original Paper on Algebraic Effects 
+- ["Handlers of Algebraic Effects" by Gordon Plotkin and Matija Pretnar](https://link.springer.com/content/pdf/10.1007/978-3-642-00590-9_7.pdf): Original Paper on Handlers for Algebraic Effects
+- ["Combining Effects: Sum and Tensor" by Martin Hyland, Gordon Plotkin and John Power](https://homepages.inf.ed.ac.uk/gdp/publications/Comb_Effects_Jour.pdf)
+
+##### Applied Systems
+
+- ["Algebraic Effects, Fibers, Coroutines Oh My!" by Brandon Dali](https://www.youtube.com/watch?v=7GcrT0SBSnI): Describes Hooks and Fibers for React as Algebraic Effects and Coroutines
+- [Poutine: A Guide to Programming with Effect Handlers in Pyro](https://pyro.ai/examples/effect_handlers.html): This describes Pyro's current effect handler stack, Poutine
+- ["Effective Concurrency with Algebraic Effects" by KC Sivaramakrishnan](https://kcsrk.info/ocaml/multicore/2015/05/20/effects-multicore/)
+
+##### Misc
+
+- ["A bibliography maintained" by Yallop](https://github.com/yallop/effects-bibliography)
+- ["Generalized Evidence Passing for Effect Handlers (or, Efficient Compilation of Effect Handlers to C)" by Xie and Leijen](https://www.microsoft.com/en-us/research/publication/generalized-evidence-passing-for-effect-handlers/)
 
 #### Probabilistic Programming
 
