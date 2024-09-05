@@ -9,5 +9,6 @@ The topic for CS252R Fall 2024 is Programming Language Theory Implementation: ho
 ## More
 
 - [Syllabus](syllabus.html)
+- [Resources](resources.html)
 - [Assignments](assignments.html)
 - [Schedule](schedule.html)
