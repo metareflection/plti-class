@@ -31,12 +31,18 @@ We will consider languages (paradigms) like Dafny (verified functional programmi
 
 We will consider techniques for reasoning about binders, for defining operational semantics (small step vs big step), for representing functions/closures (first order vs higher order).
 
-Homework: read up on STLC and iso-recursive types. TAPL is a good source for both. TODO: Before class, I will provide the formal semantics for STLC with iso-recursive types, as a PDF and as LaTeX maybe.
+Preparation homework: read up on STLC and iso-recursive types. TAPL is a good source for both. TODO: Before class, I will provide the formal semantics for STLC with iso-recursive types, as a PDF and as LaTeX maybe.
 
 
 ### Thursday, September 19
 
-TBD
+Survey on techniques for reasoning about binders and scope, theoretically and practically.
+
+Challenges include quotienting modulo alpha-equivalence, implementing capture-avoiding substitution, handling shadowing.
+
+Techniques include nominal logic, higher-orde abstract syntax (HOAS), de Bruijn index, locally nameless, combinatory logic (which avoids variables entirely).
+
+Preparation homework: dive into a specific technique, and be ready to share insights and code snippets.
 
 ## Week 4
 
