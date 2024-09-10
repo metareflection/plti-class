@@ -25,7 +25,14 @@ TBD
 
 ### Tuesday, September 17
 
-TBD
+Tutorial on implementing Simply-Typed Lambda Calculus (STLC) with iso-recursive types from formal semantics.
+
+We will consider languages (paradigms) like Dafny (verified functional programming), miniKanren (relational programming), Coq (proof assistant), Idris (dependent types).
+
+We will consider techniques for reasoning about binders, for defining operational semantics (small step vs big step), for representing functions/closures (first order vs higher order).
+
+Homework: read up on STLC and iso-recursive types. TAPL is a good source for both. TODO: Before class, I will provide the formal semantics for STLC with iso-recursive types, as a PDF and as LaTeX maybe.
+
 
 ### Thursday, September 19
 
