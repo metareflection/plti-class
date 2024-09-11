@@ -15,11 +15,12 @@ First day of class.
 
 ### Tuesday, September 10
 
-We set the schedule for the course.
+- Raffi continues his presentation.
+- Nada presents a quick [demo](https://metareflection.seas.harvard.edu/openai/) of ChatGPT integrating tools like verifiers and solvers through GPT actions.
 
 ### Thursday, September 12
 
-TBD
+We set the schedule for the course.
 
 ## Week 3
 
