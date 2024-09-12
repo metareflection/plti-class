@@ -41,7 +41,7 @@ Survey on techniques for reasoning about binders and scope, theoretically and pr
 
 Challenges include quotienting modulo alpha-equivalence, implementing capture-avoiding substitution, handling shadowing.
 
-Techniques include nominal logic, higher-orde abstract syntax (HOAS), de Bruijn index, locally nameless, combinatory logic (which avoids variables entirely).
+Techniques include nominal logic, higher-order abstract syntax (HOAS), de Bruijn index, locally nameless, combinatory logic (which avoids variables entirely).
 
 Preparation homework: dive into a specific technique, and be ready to share insights and code snippets.
 
@@ -49,47 +49,47 @@ Preparation homework: dive into a specific technique, and be ready to share insi
 
 ### Tuesday, September 24
 
-TBD
+Alvan
 
 ### Thursday, September 26
 
-TBD
+Matthew
 
 ## Week 5
 
 ### Tuesday, October 1
 
-TBD
+Ulrik and Matt
 
 ## Week 6
 
 ### Tuesday, October 8
 
-TBD
+Alex Bai
 
 ### Thursday, October 10
 
-TND
+Dennis: Hoare logic and how to semi-automatically verify it using SMTs
 
 ## Week 7
 
 ### Tuesday, October 15
 
-TBD
+Nada, maybe Raffi (multi-stage programming)
 
 ### Thursday, October 17 (Assignment 1 Due)
 
-TBD
+Alex Cai
 
 ## Week 8
 
 ### Tuesday, October 22
 
-TBD
+Daniel and Dashiell: HoTT
 
 ### Thursday, October 24
 
-TBD
+HoTT
 
 ## Week 9
 
@@ -99,17 +99,17 @@ TBD
 
 ### Thursday, October 31
 
-TBD
+Sakyana
 
 ## Week 10
 
 ### Tuesday, November 5
 
-TBD
+HoTT
 
 ### Thursday, November 7
 
-TBD
+HoTT
 
 ## Week 11
 
