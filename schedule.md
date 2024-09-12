@@ -49,67 +49,93 @@ Preparation homework: dive into a specific technique, and be ready to share insi
 
 ### Tuesday, September 24
 
-Alvan
+Alvan leads a session on probabilstic programming.
+
+Paper of the day (POPL'23): _ADEV: Sound Automatic Differentiation of Expected Values of Probabilistic Programs_ ([paper](https://dl.acm.org/doi/10.1145/3571198), [code](https://github.com/probcomp/adev)).
 
 ### Thursday, September 26
 
-Matthew
+Matthew R. leads a session on neuro-symbolic programming.
+
+Paper of the day (PLDI'23): _Scallop: A Language for Neurosymbolic Programming_ ([paper](https://dl.acm.org/doi/10.1145/3591280), [code](https://www.scallop-lang.org/)).
 
 ## Week 5
 
 ### Tuesday, October 1
 
-Ulrik and Matt
+Ulrik and Matt lead a session on theorem proving and machine learning.
+
+**Tentative** paper of the day (NeurIPS'18): _Reinforcement Learning of Theorem Proving_ ([https://arxiv.org/pdf/1805.07563](PDF)). See also more recent work by first author, [Cezary Kaliszy](http://cl-informatik.uibk.ac.at/cek/), highlighted in his [CPP'24 keynote](https://popl24.sigplan.org/details/CPP-2024-papers/22/Improved-Assistance-for-Interactive-Proof) ([video](https://www.youtube.com/watch?v=28YDQ_GO77k)).
+
+**TODO** for leaders: please explore the theme, and confirm the paper of the day. I recall the current paper is a bit low on technical details, but maybe that's OK if you supplement with your own research. Also send a pull request with more resources below.
+
+Resources on automated theorem proving: [leanTAP](https://formal.kastel.kit.edu/beckert/leantap/).
 
 ## Week 6
 
 ### Tuesday, October 8
 
-Alex Bai
+Alex B. leads a session on Rust verification.
+
+Paper of the day (OOPSLA'23): _Verus: Verifying Rust Programs using Linear Ghost Types_ ([PDF](https://www.andrew.cmu.edu/user/bparno/papers/verus-ghost.pdf), [code](https://github.com/verus-lang/verus)).
+
+Optional extra paper of the day (ICFP'22): _Aeneas: Rust Verification by Functional Translation_ ([PDF](https://dl.acm.org/doi/abs/10.1145/3547647), [code](https://github.com/AeneasVerif/aeneas)).
 
 ### Thursday, October 10
 
-Dennis: Hoare logic and how to semi-automatically verify it using SMTs
+Dennis: Hoare logic and how to semi-automatically verify it using SMTs.
+
+**TODO**: pick a paper of the day.
 
 ## Week 7
 
 ### Tuesday, October 15
 
-Nada, maybe Raffi (multi-stage programming)
+Introductory session on multi-stage programming led by Prof. Nada Amin.
+
+Paper of the day (JFP'19): _A SQL to C compiler in 500 lines of code_ ([PDF](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/sql-to-c-compiler-in-500-lines-of-code/C38B40C78B6A9C55232D4A850587FC64), [code](https://scala-lms.github.io/tutorials/query.html)).
 
 ### Thursday, October 17 (Assignment 1 Due)
 
-Alex Cai
+Alex C. leads a session on multi-stage programming.
+
+**TODO**: pick a paper of the day.
 
 ## Week 8
 
 ### Tuesday, October 22
 
-Daniel and Dashiell: HoTT
+Daniel and Dashiell will lead a week on HoTT.
+
+**TODO**: pick some reading homework. Also provide extra resources.
 
 ### Thursday, October 24
 
-HoTT
+HoTT continued.
 
 ## Week 9
 
 ### Tuesday, October 29 (Project Proposals Due)
 
-TBD
+Khoi and Saketh (TBD) lead a session on component-based synthesis for programs and proofs.
+
+**TODO**: pick a paper of the day. Possible candidates so far: _co-training for theorem proving with LLMs_ ([PDF](https://arxiv.org/pdf/2102.06203)), _specification-guided component-based synthesis for effective libraries_ ([PDF]()).
 
 ### Thursday, October 31
 
-Sakyana
+Sakyana leads a session on how PL is relevant to her research at the interplay of machine learning and medicine.
+
+**TODO**: detailed topic and paper of the day TBD.
 
 ## Week 10
 
 ### Tuesday, November 5
 
-HoTT
+TBD
 
 ### Thursday, November 7
 
-HoTT
+TBD
 
 ## Week 11
 
