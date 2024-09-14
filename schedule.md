@@ -119,7 +119,10 @@ HoTT continued.
 
 Khoi and Saketh (TBD) lead a session on component-based synthesis for programs and proofs.
 
-**TODO**: pick a paper of the day. Possible candidates so far: _co-training for theorem proving with LLMs_ ([PDF](https://arxiv.org/pdf/2102.06203)), _specification-guided component-based synthesis for effective libraries_ ([PDF]()).
+**TODO**: pick a paper of the day. Possible candidates so far:
+- _Co-training for Theorem Proving with LLMs_ ([PDF](https://arxiv.org/pdf/2102.06203)),
+- _Specification-Guided Component-Based Synthesis for Effective Libraries_ ([link](https://dl.acm.org/doi/10.1145/3563310)),
+- _Statically Contextualizing Large Language Models with Typed Holes_ ([link](https://arxiv.org/abs/2409.00921)).
 
 ### Thursday, October 31
 
