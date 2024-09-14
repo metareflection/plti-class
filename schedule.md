@@ -34,6 +34,10 @@ We will consider techniques for reasoning about binders, for defining operationa
 
 Preparation homework: read up on STLC and iso-recursive types. TAPL is a good source for both. TODO: Before class, I will provide the formal semantics for STLC with iso-recursive types, as a PDF and as LaTeX maybe.
 
+Relevant code links:
+- [In Dafny, STLC with iso-recursive types by Prof. Nada Amin.](https://github.com/namin/dafny-sandbox/blob/master/Stlc.dfy)
+- [In miniKanren, the typing rules for the core STLC.](https://github.com/michaelballantyne/faster-minikanren/blob/master/test-infer.scm)
+- [In miniKanren, the big-step relational evaluator for the core STLC.](https://github.com/michaelballantyne/faster-minikanren/blob/master/simple-interp.scm)
 
 ### Thursday, September 19
 
