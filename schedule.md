@@ -69,7 +69,7 @@ Paper of the day (PLDI'23): _Scallop: A Language for Neurosymbolic Programming_ 
 
 Ulrik and Matt lead a session on theorem proving and machine learning.
 
-**Tentative** paper of the day (NeurIPS'18): _Reinforcement Learning of Theorem Proving_ ([https://arxiv.org/pdf/1805.07563](PDF)). See also more recent work by first author, [Cezary Kaliszy](http://cl-informatik.uibk.ac.at/cek/), highlighted in his [CPP'24 keynote](https://popl24.sigplan.org/details/CPP-2024-papers/22/Improved-Assistance-for-Interactive-Proof) ([video](https://www.youtube.com/watch?v=28YDQ_GO77k)).
+**Tentative** paper of the day (NeurIPS'18): _Reinforcement Learning of Theorem Proving_ ([PDF](https://arxiv.org/pdf/1805.07563)). See also more recent work by first author, [Cezary Kaliszy](http://cl-informatik.uibk.ac.at/cek/), highlighted in his [CPP'24 keynote](https://popl24.sigplan.org/details/CPP-2024-papers/22/Improved-Assistance-for-Interactive-Proof) ([video](https://www.youtube.com/watch?v=28YDQ_GO77k)).
 
 **TODO** for leaders: please explore the theme, and confirm the paper of the day. I recall the current paper is a bit low on technical details, but maybe that's OK if you supplement with your own research. Also send a pull request with more resources below.
 
