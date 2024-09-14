@@ -151,7 +151,9 @@ Paper of the day: TBD.
 
 ### Tuesday, November 12
 
-TBD
+Alice leads a session on TBD.
+
+Paper of the day: TBD.
 
 ### Thursday, November 14
 
