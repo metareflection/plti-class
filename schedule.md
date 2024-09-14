@@ -15,8 +15,8 @@ First day of class.
 
 ### Tuesday, September 10
 
-- Raffi continues his presentation.
-- Nada presents a quick [demo](https://metareflection.seas.harvard.edu/openai/) of ChatGPT integrating tools like verifiers and solvers through GPT actions.
+- TF Raffi Sanna continues his presentation.
+- Prof. Nada Amin presents a quick [demo](https://metareflection.seas.harvard.edu/openai/) of ChatGPT integrating tools like verifiers and solvers through GPT actions.
 
 ### Thursday, September 12
 
@@ -138,7 +138,10 @@ TBD
 
 ### Thursday, November 7
 
-TBD
+Guest lecture by Kartik Chandra (MIT) around [memo](https://github.com/kach/memo),
+a new probabilistic programming language for expressing computational cognitive models.
+
+Paper of the day: TBD.
 
 ## Week 11
 
