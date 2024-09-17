@@ -32,7 +32,7 @@ We will consider languages (paradigms) like Dafny (verified functional programmi
 
 We will consider techniques for reasoning about binders, for defining operational semantics (small step vs big step), for representing functions/closures (first order vs higher order).
 
-Preparation homework: read up on STLC and iso-recursive types. TAPL is a good source for both. TODO: Before class, I will provide the formal semantics for STLC with iso-recursive types, as a PDF and as LaTeX maybe.
+Preparation homework: read up on STLC and iso-recursive types. TAPL is a good source for both.
 
 Relevant code links:
 - [In Dafny, STLC with iso-recursive types by Prof. Nada Amin.](https://github.com/namin/dafny-sandbox/blob/master/Stlc.dfy)
