@@ -138,7 +138,7 @@ Sakyana leads a session on how PL is relevant to her research at the interplay o
 
 ### Tuesday, November 5
 
-TBD
+Alice will lead a session. TBD: possibly at the intersection of linguistics and programming languages.
 
 ### Thursday, November 7
 
