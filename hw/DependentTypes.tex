@@ -1,0 +1,303 @@
+% Created 2024-09-21 Sat 18:37
+% Intended LaTeX compiler: pdflatex
+\documentclass[12pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\pagenumbering{gobble}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{mathpartir}
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+\date{}
+\title{}
+\hypersetup{
+ pdfauthor={rvs314},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
+ pdflang={English}}
+\begin{document}
+
+
+\section*{Introduction}
+\label{sec:orgaad82bf}
+
+Dependent types are an extension to traditional types (such as the one seen in the simply-typed lambda calculus) to make them more expressive. Specifically, a type system is said to be dependent if it allows types to depend on terms. 
+
+This type theory is based on Per Martin-Löf's original type theory, which was posited as an alternative foundation for mathematics. In it, we can encode any constructive mathematical theorem.
+
+In this assignment, you'll be implementing a small language which uses dependent types, building up the language to include new features, then ultimately proving some simple theorems using the language. The next few sections define the language formally, and it will be your task to implement the language yourself.
+
+\section*{Syntax}
+\label{sec:org8043dcc}
+
+\begin{align*}
+e, \tau \Coloneqq&\ x                           & \text{Variable reference} \\
+  |&\ \star                               & \text{The type of types} \\
+  |&\ (x : \tau_1) \rightarrow \tau_2           & \text{Dependent function types (AKA $\Pi$-types)}\\
+  |&\ \lambda (x : \tau_1).\ e_2               & \text{Function introduction} \\
+  |&\ e_1\ e_2                            & \text{Function elimination}\\
+  |&\ \mathbb{N}                          & \text{The natural number type}\\
+  |&\ 0\ |\ \mathtt{succ}\ e              & \text{Natural number introduction}\\
+  |&\ \mathtt{elimNat}\ e_1\ e_2\ e_3\ e_4 & \text{Natural number elimination}
+\end{align*}
+
+A few bits of syntactic sugar:
+\begin{itemize}
+\item We occasionally use the name `\_' to bind values we don't care about. This name should not appear in the variable reference position.
+\item We can elide names in \(\Pi\)-types if they are not bound in the type's codomain: \(e_1 \rightarrow e_2 \equiv (\_ : e_1) \rightarrow e_2\).
+\item We write the function arrow as right-associative: \((x : e_1) \rightarrow (x : e_2) \rightarrow e_3 \equiv (x : e_1) \rightarrow ((x : e_2) \rightarrow e_3)\).
+\item We write function elimination as left associative: \(e_1\ e_2\ e_3 \equiv (e_1\ e_2)\ e_3\).
+\item We write a natural number as the repeated application of \texttt{succ} to \texttt{0}. As an example, we say that \(4 \equiv \mathtt{succ}(\mathtt{succ} (\mathtt{succ} (\mathtt{succ}\ 0)))\).
+\end{itemize}
+
+\subsection*{Note: \(\alpha\)-equivalence}
+\label{sec:orgf017d4e}
+
+In the above syntax, we use the non-terminal \(x\) to stand for any variable. In general, the particular variable names we choose for a closed term should not matter. For example, \(\lambda (x : \mathbb{N}). x \equiv \lambda (y : \mathbb{N}). y\). This property --- that consistently renaming a parameter and all of its occurrences does not change the meaning of a term --- is called \(\alpha\)-equivalence. In the following sections, we often make the implicit assumption that terms are renamed to avoid collision.
+
+\section*{Meta-Functions}
+\label{sec:org0aab1ed}
+
+\subsection*{Environments}
+\label{sec:org3ee83b2}
+
+Type-checking is performed relative to a \textbf{environment}, also called a context, which is often named \(\Gamma\). An environment is a list of type/variable pairs, written \((x_1 : \tau_1 , x_2 : \tau_2, \dots)\). We write \(\Gamma(x)\) to mean the type which is most recently associated with the variable \(x\) in the environment \(\Gamma\). Note: this is not necessarily defined for all variables.
+
+\begin{equation*}
+\Gamma(x) = \begin{cases}
+\tau       & \text{if } \Gamma = (\dots, x : \tau) \\
+(\dots)(x) & \text{if } \Gamma = (\dots, x_1 : \tau) \text{ and } x_1 \neq x \\
+\end{cases}
+\end{equation*}
+
+\subsection*{Free Variables}
+\label{sec:orgc030710}
+
+We say that a variable is \textbf{free} in some term when that variable occurs in the term, but is not bound by a binding term (such as a \(\lambda\) or \(\Pi\) term). We write the set of free variables present in a term \(e\) as \(\mathcal{FV}(e)\).
+
+\begin{equation*}
+\mathcal{FV}(e) = \begin{cases}
+\{ x \}   & \text{if } e = x \\
+\mathcal{FV}(\tau_1) \cup (\mathcal{FV}(\tau_2) - \{ x \})
+  &\text{if } e = (x : \tau_1) \rightarrow \tau_2 \\
+\mathcal{FV}(\tau_1) \cup (\mathcal{FV}(e_1) - \{ x \})
+  &\text{if } e = \lambda (x : \tau_1). e_1 \\
+\mathcal{FV}(e_1) \cup \mathcal{FV}(e_2)
+  &\text{if } e = e_1\ e_2 \\
+\mathcal{FV}(e_1) 
+  &\text{if } e = \mathtt{succ}\ e_1 \\
+\mathcal{FV}(e_1)
+  \cup \mathcal{FV}(e_2)
+  \cup \mathcal{FV}(e_3)
+  \cup \mathcal{FV}(e_4)
+  &\text{if } e = \mathtt{elimNat}\ e_1\ e_2\ e_3\ e_4 \\
+\emptyset & \text{otherwise}
+\end{cases}
+\end{equation*}
+
+\subsection*{Capture-Avoiding Substitution}
+\label{sec:orgab62c4a}
+
+When evaluating application, we often use a notion of \textbf{substitution} - we replace all occurrences of the argument variable with the argument value. This is a suitable mental model for many programs, but a naive notion of substitution can lead to odd bugs. We write \(e_1[x \mapsfrom{} e_2]\) to mean ``the term \(e_1\), but with all free occurrences of \(x\) replaced with \(e_2\)''. Note: \(e_1 [ x \mapsfrom e_2 ]\) is not necessarily defined for all terms - some may require rewriting in terms of \(\alpha\)-equivalence.
+
+\begin{equation*}
+e_1[x \mapsfrom e_2] = \begin{cases}
+e_2 & \text{if } e_1 = x \\
+(x_1 : \tau_1[x \mapsfrom e_2]) \rightarrow \tau_2[x \mapsfrom e_2]
+   &\text{if } e_1 = (x_1 : \tau_1) \rightarrow \tau_2 \\
+   &\text{ and } x_1 \not \in \{x\} \cup \mathcal{FV}(e_2) \\
+\lambda (x_1 : \tau_1[x \mapsfrom e_2]). e_3[x \mapsfrom e_2]
+   &\text{if } e_1 = \lambda (x_1 : \tau_1). e_3 \\
+   &\text{ and } x_1 \not \in \{x\} \cup \mathcal{FV}(e_2) \\
+e_3[x \mapsfrom e_2]\ e_4[x \mapsfrom e_2] & \text{if } e_1 = e_3\ e_4 \\
+\mathtt{succ}\ e_3[x \mapsfrom e_2] & \text{if } e_1 = \mathtt{succ}\ e_3 \\
+\mathtt{elimNat}
+  \ e_3[x \mapsfrom e_2]
+  \ e_4[x \mapsfrom e_2]
+  \ e_5[x \mapsfrom e_2]
+  \ e_6[x \mapsfrom e_2]
+  & \text{if } e_1 = \mathtt{elimNat}\ e_3\ e_4\ e_5\ e_6 \\
+e_1 & \text{otherwise}
+\end{cases}
+\end{equation*}
+
+\section*{Semantics}
+\label{sec:org56c8eae}
+
+There are two relevant judgments, \(\Gamma \vdash e : \tau\) (read as ``environment \(\Gamma\) types \(e\) as \(\tau\)'') and \(e_1 \rightsquigarrow e_2\) (read as ``\(e_1\), after one step of evaluation, gives \(e_2\)''). The relation \(e_1 \rightsquigarrow^* e_2\) is the repeated application of evaluation rules until no more apply.
+
+\subsection*{Typing Relation}
+\label{sec:org387e45b}
+
+\begin{mathpar}
+\inferrule*[right=Type-Var-Ref]
+  {\Gamma(x) = \tau}
+  {\Gamma \vdash x : \tau}
+\and
+\inferrule*[right=Type-$\star$]{\ }{\Gamma \vdash \star : \star}
+\and
+\inferrule*[right=Type-$\Pi$]
+  {\Gamma \vdash \tau_1 : \star \\ \Gamma, x : \tau_1 \vdash \tau_2 : \star}
+  {\Gamma \vdash (x : \tau_1) \rightarrow \tau_2 : \star}
+\and
+\inferrule*[right=Type-$\lambda$]
+  {\Gamma \vdash \tau_1 : \star
+   \\ \Gamma, x : \tau_1 \vdash \tau_2 : \star
+   \\ \Gamma, x : \tau_1 \vdash e_2 : \tau_2}
+  {\Gamma \vdash \lambda (x : \tau_1) . e_2 : (x : \tau_1) \rightarrow \tau_2}
+\and
+\inferrule*[right=Type-Eval]
+  {\tau_1 \rightsquigarrow^* \tau_2 \\ \Gamma \vdash e : \tau_1}
+  {\Gamma \vdash e : \tau_2}
+\and
+\inferrule*[right=Type-App]
+  {\Gamma \vdash e_1 : (x : \tau_1) \rightarrow \tau_2
+  \\ \Gamma \vdash e_2 : \tau_1}
+  {\Gamma \vdash e_1\ e_2 : \tau_2[x \mapsfrom e_2]}
+\\
+\inferrule*[right=Type-$\mathbb{N}$]
+  {\ }
+  {\Gamma \vdash \mathbb{N} : \star}
+\and
+\inferrule*[right=Type-0]
+  {\ }
+  {\Gamma \vdash 0 : \mathbb{N}}
+\and
+\inferrule*[right=Type-$\mathtt{succ}$]
+  {\Gamma \vdash e : \mathbb{N}}
+  {\Gamma \vdash \mathtt{succ}\ e : \mathbb{N}}
+\and
+\inferrule*[right=Type-$\mathtt{elimNat}$]
+  {\Gamma \vdash e_1 : \mathbb{N} \rightarrow \star
+  \\ \Gamma \vdash e_2 : e_1\ 0
+  \\ \Gamma \vdash e_3 : (x : \mathbb{N})
+            \rightarrow e_1\ x
+            \rightarrow e_1\ (\mathtt{succ}\ x)
+  \\ \Gamma \vdash e_4 : \mathbb{N}}
+ {\Gamma \vdash \mathtt{elimNat}\ e_1\ e_2\ e_3\ e_4 : e_1\ e_4}
+\end{mathpar}
+
+\subsubsection*{Example: Polymorphic Identity Function}
+\label{sec:org290cbad}
+
+The following is a derivation which types the polymorphic identity function \texttt{id}, defined as follows: 
+
+\begin{align*}
+& \mathtt{id} : (A : \star) \rightarrow A \rightarrow A \\
+& \mathtt{id} = \lambda (A : \star). \lambda (x : A). x
+\end{align*}
+
+We can prove that this type is accurate using a derivation:
+
+\begin{equation*}
+\inferrule*[right=Type-$\lambda$]
+  {  \inferrule*[right=Type-$\star$]{\ }{\vdash \star : \star}
+  \\ \inferrule*[right=Type-$\Pi$]
+       {  \inferrule*[right=Type-Var-Ref]
+            {(A : \star)(A) = \star}
+            {A : \star \vdash A : \star}
+       \\ \inferrule*[right=Type-Var-Ref]
+            {(A : \star, \_ : A)(A) = \star}
+            {A : \star, \_ : A \vdash A : \star}}
+       {A : \star \vdash A \rightarrow A : \star}
+  \\ \inferrule*[right=Type-$\lambda$]
+       {  \inferrule*[right=Type-Var-Ref]
+            {(A : \star)(A) = \star}
+            {A : \star \vdash A : \star}
+       \\ \inferrule*[right=Type-Var-Ref]
+            {(A : \star, x : A)(A) = \star}
+            {A : \star , x : A \vdash A : \star}
+       \\ \inferrule*[right=Type-Var-Ref]
+            {(A : \star, x : A)(x) = A}
+            {A : \star, x : A \vdash x : A}
+       }
+       {A : \star \vdash \lambda (x : A). x : A \rightarrow A}
+  }
+  {\vdash \lambda (A : \star).\
+          \lambda (x : A).\
+          x
+        : (A : \star) \rightarrow
+          A \rightarrow
+          A}
+\end{equation*}
+
+\subsection*{Evaluation Relation}
+\label{sec:org3be8cec}
+
+The following defines the evaluation relation. This may seem like a lot, but only the first three do any interesting work (these are called ``computational rules''). The rest just thread through evaluation to various subterms (these are called ``congruence rules'').
+
+\begin{mathpar}
+\inferrule*[right=Eval-App]
+  {\ }
+  {(\lambda (x : \tau_1). e_1)\ e_2
+   \rightsquigarrow e_1[x \mapsfrom e_2]}
+\and
+\inferrule*[right=Eval-$\mathtt{elimNat}$-0]
+  {\ }
+  {\mathtt{elimNat}\ e_1\ e_2\ e_3\ 0 \rightsquigarrow e_2}
+\and
+\inferrule*[right=Eval-$\mathtt{elimNat}$-$\mathtt{succ}$]
+  {\ }
+  {\mathtt{elimNat}\ e_1\ e_2\ e_3\ (\mathtt{succ}\ e_4) \rightsquigarrow
+   e_3\ e_4\ (\mathtt{elimNat}\ e_1\ e_2\ e_3\ e_4)}
+\and
+\inferrule*[right=Eval-$\Pi$-domain]
+  {\tau_1 \rightsquigarrow \tau_2}
+  {(x : \tau_1) \rightarrow \tau_3 \rightsquigarrow
+   (x : \tau_2) \rightarrow \tau_3}
+\and
+\inferrule*[right=Eval-$\Pi$-codomain]
+  {\tau_2 \rightsquigarrow \tau_3}
+  {(x : \tau_1) \rightarrow \tau_2 \rightsquigarrow
+   (x : \tau_1) \rightarrow \tau_3}
+\and
+\inferrule*[right=Eval-$\lambda$-Body]
+  {e_1 \rightsquigarrow e_2}
+  {\lambda (x : \tau_1) . e_1
+   \rightsquigarrow \lambda (x : \tau_1) . e_2}
+\and
+\inferrule*[right=Eval-Rator]
+  {e_1 \rightsquigarrow e_2}
+  {e_1\ e_3 \rightsquigarrow
+   e_2\ e_3}
+\and
+\inferrule*[right=Eval-Rand]
+  {e_1 \rightsquigarrow e_2}
+  {e_3\ e_1 \rightsquigarrow e_3\ e_2}
+\and
+\inferrule*[right=Eval-$\mathtt{succ}$]
+  {e_1 \rightsquigarrow e_2 }
+  {\mathtt{succ}\ e_1 \rightsquigarrow \mathtt{succ}\ e_2}
+\and
+\inferrule*[right=Eval-$\mathtt{elimNat}$-mot]
+  {e_1 \rightsquigarrow e_5 }
+  {\mathtt{elimNat}\ e_1\ e_2\ e_3\ e_4
+   \rightsquigarrow \mathtt{elimNat}\ e_5\ e_2\ e_3\ e_4}
+\and
+\inferrule*[right=Eval-$\mathtt{elimNat}$-base]
+  {e_2 \rightsquigarrow e_5 }
+  {\mathtt{elimNat}\ e_1\ e_2\ e_3\ e_4
+   \rightsquigarrow \mathtt{elimNat}\ e_1\ e_5\ e_3\ e_4}
+\and
+\inferrule*[right=Eval-$\mathtt{elimNat}$-ind]
+  {e_3 \rightsquigarrow e_5 }
+  {\mathtt{elimNat}\ e_1\ e_2\ e_3\ e_4
+   \rightsquigarrow \mathtt{elimNat}\ e_1\ e_2\ e_5\ e_4}
+\and
+\inferrule*[right=Eval-$\mathtt{elimNat}$-target]
+  {e_4 \rightsquigarrow e_5 }
+  {\mathtt{elimNat}\ e_1\ e_2\ e_3\ e_4
+   \rightsquigarrow \mathtt{elimNat}\ e_1\ e_2\ e_3\ e_5}
+\end{mathpar}
+\end{document}
