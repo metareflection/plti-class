@@ -1,6 +1,6 @@
 # Assignments
 
-## Assignment: Implement a given semantic model
+## Assignment: Implement a (given) semantic model
 
 Here is a semantic model for dependent types, provided as a [PDF](hw/DependentTypes.pdf) and [LaTeX](hw/DependentTypes.tex).
 
