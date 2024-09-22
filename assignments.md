@@ -13,7 +13,7 @@ Provide the semantic model, on paper as a PDF.
 Then implement the model.
 
 Show some interesting program(s) in your model.
-For the model we provide, it is possible to prove that the theorem that addition is commutative,
+For the model we provide, it is possible to prove the theorem that addition is commutative,
 as the model builds in natural numbers and can encode equality.
 This [code in Agda](hw/stdlib.agda) sketches how to prove this theorem within the subset of our provided model.
 However, one difference is that parameter types are always explicit in our model.
