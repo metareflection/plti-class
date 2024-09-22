@@ -33,7 +33,7 @@ One alternative is to use De Bruijn indices, with the advantage that terms can b
 ### Submitting your assignment  (Due on Thursday, October 17)
 
 To submit your assignment, make a pull request to the [_private_ Github metareflection/plti-studio](https://github.com/metareflection/plti-studio).
-If you don't have access, ask Prof. Nada Amin to add you.
+If you don't have access, ask Prof. Nada Amin or TF Raffi to add you.
 
 In your pull request, add a link to your solution in the README. You can create a personal folder for your solution, or you can link to your own public Github repo.
 
