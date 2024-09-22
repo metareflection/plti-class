@@ -32,7 +32,7 @@ One alternative is to use De Bruijn indices, with the advantage that terms can b
 
 ### Some resources for understanding and implementing dependent types
 
-Note that these tutorials use more advanced techniques that what is necessary for the assignment.
+Note that these tutorials use more advanced techniques than what is necessary for the assignment.
 
 - _A tutorial implementation of a dependently typed lambda calculus_ ([PDF](https://www.andres-loeh.de/LambdaPi/LambdaPi.pdf)) by L&ouml;h, McBride, Swierstra (2001).
 - _pi-forall_ ([notes](https://github.com/sweirich/pi-forall/blob/2023/doc/oplss.pdf), [code](https://github.com/sweirich/pi-forall)) by Stephanie Weirich (2023).
