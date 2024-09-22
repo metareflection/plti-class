@@ -30,6 +30,13 @@ Capture-avoiding substitution and alpha-equivlanece require a principled techniq
 It is possibel to use explicit names. This typically requires defining primitives for generating a fresh variable name given a set of existing variable names, for renaming all free occurrences of a variable to another, for equating terms up to alpha-equivalence. This ad-hoc approach requires careful renaming with fresh variables to avoid variable capture.
 One alternative is to use De Bruijn indices, with the advantage that terms can be compared structurally and perhaps the disadvantage that manipulating terms is less intuitive.
 
+### Submitting your assignment  (Due on Thursday, October 17)
+
+To submit your assignment, make a pull request to the [_private_ Github metareflection/plti-studio](https://github.com/metareflection/plti-studio).
+If you don't have access, ask Prof. Nada Amin to add you.
+
+In your pull request, add a link to your solution in the README. You can create a personal folder for your solution, or you can link to your own public Github repo.
+
 ### Some resources for understanding and implementing dependent types
 
 Note that these tutorials use more advanced techniques than what is necessary for the assignment.
