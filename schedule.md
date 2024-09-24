@@ -157,7 +157,9 @@ Paper of the day: TBD.
 
 ### Thursday, November 14
 
-TBD
+Wolfie leads a session on the [TACO](http://tensor-compiler.org/) tensor algebra compiler.
+
+Paper of the day: TBD. See [all project papers](http://tensor-compiler.org/publications.html).
 
 ## Week 12
 
