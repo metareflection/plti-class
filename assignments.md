@@ -2,7 +2,7 @@
 
 ## Assignment: Implement a (given) semantic model
 
-Here is a semantic model for dependent types, provided as a [PDF](hw/DependentTypes.pdf) and [LaTeX](hw/DependentTypes.tex).
+Here is a semantic model for dependent types, provided as a [PDF](hw/DependentTypes.pdf) and [LaTeX](hw/DependentTypes.tex).  Also, [here is an easier to read version](hw/DependentTypesProofTree.pdf) (if you zoom in!) of the polymorphic identity function derivation tree on page 3 of the PDF. 
 
 Implement this model in the language/system of your choice.
 
