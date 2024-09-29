@@ -75,6 +75,12 @@ Ulrik and Matt lead a session on theorem proving and machine learning.
 
 Resources on automated theorem proving: [leanTAP](https://formal.kastel.kit.edu/beckert/leantap/).
 
+### Thursday, October 3
+
+Raffi will lead a session on binders.
+
+Preparation homework: Look at the definition of capture-avoiding substitution as laid out [in the assignment](https://plti.metareflection.club/hw/DependentTypes.pdf). Try and find a few examples on which CAS is undefined. What happens if we try to evaluate them naively (just replacing all the variables by name)? Can you use the α-equivalence rule to convert your examples into terms on which CAS is defined? 
+
 ## Week 6
 
 ### Tuesday, October 8
