@@ -1,4 +1,4 @@
-% Created 2024-09-21 Sat 18:37
+% Created 2024-09-25 Wed 17:58
 % Intended LaTeX compiler: pdflatex
 \documentclass[12pt]{article}
 \usepackage[margin=0.5in]{geometry}
@@ -30,7 +30,7 @@
 
 
 \section*{Introduction}
-\label{sec:orgaad82bf}
+\label{sec:org7d8150d}
 
 Dependent types are an extension to traditional types (such as the one seen in the simply-typed lambda calculus) to make them more expressive. Specifically, a type system is said to be dependent if it allows types to depend on terms. 
 
@@ -39,7 +39,7 @@ This type theory is based on Per Martin-Löf's original type theory, which was p
 In this assignment, you'll be implementing a small language which uses dependent types, building up the language to include new features, then ultimately proving some simple theorems using the language. The next few sections define the language formally, and it will be your task to implement the language yourself.
 
 \section*{Syntax}
-\label{sec:org8043dcc}
+\label{sec:orgbe495e9}
 
 \begin{align*}
 e, \tau \Coloneqq&\ x                           & \text{Variable reference} \\
@@ -62,15 +62,15 @@ A few bits of syntactic sugar:
 \end{itemize}
 
 \subsection*{Note: \(\alpha\)-equivalence}
-\label{sec:orgf017d4e}
+\label{sec:org01212bf}
 
 In the above syntax, we use the non-terminal \(x\) to stand for any variable. In general, the particular variable names we choose for a closed term should not matter. For example, \(\lambda (x : \mathbb{N}). x \equiv \lambda (y : \mathbb{N}). y\). This property --- that consistently renaming a parameter and all of its occurrences does not change the meaning of a term --- is called \(\alpha\)-equivalence. In the following sections, we often make the implicit assumption that terms are renamed to avoid collision.
 
 \section*{Meta-Functions}
-\label{sec:org0aab1ed}
+\label{sec:org64db96c}
 
 \subsection*{Environments}
-\label{sec:org3ee83b2}
+\label{sec:org0568858}
 
 Type-checking is performed relative to a \textbf{environment}, also called a context, which is often named \(\Gamma\). An environment is a list of type/variable pairs, written \((x_1 : \tau_1 , x_2 : \tau_2, \dots)\). We write \(\Gamma(x)\) to mean the type which is most recently associated with the variable \(x\) in the environment \(\Gamma\). Note: this is not necessarily defined for all variables.
 
@@ -82,7 +82,7 @@ Type-checking is performed relative to a \textbf{environment}, also called a con
 \end{equation*}
 
 \subsection*{Free Variables}
-\label{sec:orgc030710}
+\label{sec:org6ddeb90}
 
 We say that a variable is \textbf{free} in some term when that variable occurs in the term, but is not bound by a binding term (such as a \(\lambda\) or \(\Pi\) term). We write the set of free variables present in a term \(e\) as \(\mathcal{FV}(e)\).
 
@@ -107,7 +107,7 @@ We say that a variable is \textbf{free} in some term when that variable occurs i
 \end{equation*}
 
 \subsection*{Capture-Avoiding Substitution}
-\label{sec:orgab62c4a}
+\label{sec:org495e7e6}
 
 When evaluating application, we often use a notion of \textbf{substitution} - we replace all occurrences of the argument variable with the argument value. This is a suitable mental model for many programs, but a naive notion of substitution can lead to odd bugs. We write \(e_1[x \mapsfrom{} e_2]\) to mean ``the term \(e_1\), but with all free occurrences of \(x\) replaced with \(e_2\)''. Note: \(e_1 [ x \mapsfrom e_2 ]\) is not necessarily defined for all terms - some may require rewriting in terms of \(\alpha\)-equivalence.
 
@@ -133,12 +133,14 @@ e_1 & \text{otherwise}
 \end{equation*}
 
 \section*{Semantics}
-\label{sec:org56c8eae}
+\label{sec:org066ebfe}
 
-There are two relevant judgments, \(\Gamma \vdash e : \tau\) (read as ``environment \(\Gamma\) types \(e\) as \(\tau\)'') and \(e_1 \rightsquigarrow e_2\) (read as ``\(e_1\), after one step of evaluation, gives \(e_2\)''). The relation \(e_1 \rightsquigarrow^* e_2\) is the repeated application of evaluation rules until no more apply.
+There are two relevant judgments, the typing relation and the reduction relation. These two judgment give a semantics to how type-checking and evaluation should work, respectively.
 
 \subsection*{Typing Relation}
-\label{sec:org387e45b}
+\label{sec:org04f4304}
+
+Our typing judgment takes the form \(\boxed{\Gamma \vdash e : \tau}\), read as ``environment \(\Gamma\) types \(e\) as \(\tau\)''. 
 
 \begin{mathpar}
 \inferrule*[right=Type-Var-Ref]
@@ -158,8 +160,8 @@ There are two relevant judgments, \(\Gamma \vdash e : \tau\) (read as ``environm
   {\Gamma \vdash \lambda (x : \tau_1) . e_2 : (x : \tau_1) \rightarrow \tau_2}
 \and
 \inferrule*[right=Type-Eval]
-  {\tau_1 \rightsquigarrow^* \tau_2 \\ \Gamma \vdash e : \tau_1}
-  {\Gamma \vdash e : \tau_2}
+  {\tau_1 \rightsquigarrow^* \tau_2 \\ \Gamma \vdash e : \tau_2}
+  {\Gamma \vdash e : \tau_1}
 \and
 \inferrule*[right=Type-App]
   {\Gamma \vdash e_1 : (x : \tau_1) \rightarrow \tau_2
@@ -189,7 +191,7 @@ There are two relevant judgments, \(\Gamma \vdash e : \tau\) (read as ``environm
 \end{mathpar}
 
 \subsubsection*{Example: Polymorphic Identity Function}
-\label{sec:org290cbad}
+\label{sec:org766b048}
 
 The following is a derivation which types the polymorphic identity function \texttt{id}, defined as follows: 
 
@@ -232,10 +234,12 @@ We can prove that this type is accurate using a derivation:
           A}
 \end{equation*}
 
-\subsection*{Evaluation Relation}
-\label{sec:org3be8cec}
+\subsection*{Reduction Relation}
+\label{sec:org7bdb437}
 
-The following defines the evaluation relation. This may seem like a lot, but only the first three do any interesting work (these are called ``computational rules''). The rest just thread through evaluation to various subterms (these are called ``congruence rules'').
+Our reduction relation takes the form \(\boxed{e_1 \rightsquigarrow e_2}\), which can be read as ``\(e_1\) can be reduced to \(e_2\) by one step of reduction''. We often also talk about the transitive closure of this relation, written \(\boxed{e_1 \rightsquigarrow^* e_2}\), read as ``\(e_1\) can be repeatedly reduced to \(e_2\), which can be reduced no further''.
+
+This may seem like a lot of rules, but only the first three do any interesting work (these are called ``computational rules''). The rest just thread through reduction to various subterms (these are called ``congruence rules'').
 
 \begin{mathpar}
 \inferrule*[right=Eval-App]
