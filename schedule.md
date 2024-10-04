@@ -103,7 +103,7 @@ Dennis: Hoare logic and how to semi-automatically verify it using SMTs.
 
 ### Tuesday, October 15
 
-Introductory session on multi-stage programming led by Prof. Nada Amin.
+Introductory session on multi-stage programming led by Cameron Wong, who will also discuss related ongoing research.
 
 Paper of the day (JFP'19): _A SQL to C compiler in 500 lines of code_ ([PDF](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/sql-to-c-compiler-in-500-lines-of-code/C38B40C78B6A9C55232D4A850587FC64), [code](https://scala-lms.github.io/tutorials/query.html)).
 
