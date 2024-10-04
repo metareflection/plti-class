@@ -60,8 +60,23 @@ As a staring point, see the [SIGPLAN blogpost on reflective towers](https://blog
 
 ##### Misc
 
-- ["A bibliography maintained" by Yallop](https://github.com/yallop/effects-bibliography)
+- [A bibliography maintained by Yallop](https://github.com/yallop/effects-bibliography)
 - ["Generalized Evidence Passing for Effect Handlers (or, Efficient Compilation of Effect Handlers to C)" by Xie and Leijen](https://www.microsoft.com/en-us/research/publication/generalized-evidence-passing-for-effect-handlers/)
+
+#### Binding Structures
+
+- [The POPLmark Challenge](https://www.seas.upenn.edu/~plclub/poplmark/)
+- [A Solution to the PoplMark Challenge using de Bruijn indices in Isabelle/HOL](https://isabelle.in.tum.de/~berghofe/papers/poplmark_jar.pdf)
+- [DBLib: a Coq library for working with de Bruijn indices](https://github.com/coq-community/dblib)
+- [DeBruijn: Intrinsically-typed de Bruijn representation](https://plfa.github.io/DeBruijn/)
+- [A locally nameless solution to the POPLmark challenge](https://xavierleroy.org/publi/POPLmark-locally-nameless.pdf)
+- [Locally Nameless at Scale](https://www.seas.upenn.edu/~sweirich/papers/coqpl2018.pdf)
+- [The Locally Nameless Representation](https://www.chargueraud.org/research/2009/ln/main.pdf)
+- [Higher-Order Abstract Syntax](https://www.cs.cmu.edu/~fp/papers/pldi88.pdf)
+- [Boxes Go Bananas: Encoding Higher-Order Abstract Syntax with Parametric Polymorphism](https://www.cis.upenn.edu/~sweirich/papers/itabox/icfp-published-version.pdf)
+- [Parametric Higher-Order Abstract Syntax for Mechanized Semantics](http://adam.chlipala.net/papers/PhoasICFP08/PhoasICFP08.pdf)
+- [Formal Metatheory of Second-Order Abstract Syntax](https://arxiv.org/pdf/2201.03504v1)
+- [Nominal Logic: A First Order Theory of Names and Binding](https://www.cl.cam.ac.uk/~amp12/papers/nomlfo/nomlfo.pdf)
 
 #### Probabilistic Programming
 

@@ -79,7 +79,9 @@ Resources on automated theorem proving: [leanTAP](https://formal.kastel.kit.edu/
 
 Raffi will lead a session on binders.
 
-Preparation homework: Look at the definition of Capture-Avoiding Substitution (CAS) as laid out [in the assignment](https://plti.metareflection.club/hw/DependentTypes.pdf). Try and find a few examples on which CAS is undefined. What happens if we try to evaluate them naively (just replacing all the variables by name)? Can you use the α-equivalence rule to convert your examples into terms on which CAS is defined? 
+Preparation homework: Look at the definition of capture-avoiding substitution as laid out [in the assignment](hw/DependentTypes.pdf). Try and find a few examples on which CAS is undefined. What happens if we try to evaluate them naively (just replacing all the variables by name)? Can you use the α-equivalence rule to convert your examples into terms on which CAS is defined? 
+
+The slides for this session are available [here](hw/pres.pdf).
 
 ## Week 6
 
