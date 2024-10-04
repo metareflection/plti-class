@@ -144,7 +144,7 @@ Saketh and Suki lead a session TBD.
 - OOPSLA'22: _Specification-Guided Component-Based Synthesis for Effective Libraries_ ([link](https://dl.acm.org/doi/10.1145/3563310)),
 - OOPSLA'24: _Statically Contextualizing Large Language Models with Typed Holes_ ([link](https://arxiv.org/abs/2409.00921)).
 - COLM'24: _An In-Context Learning Agent for Formal Theorem-Proving_ ([link](https://arxiv.org/abs/2310.04353)).
-- _LeanDojo: Theorem Proving with Retrieval-Augmented Language Models_ ([link](https://arxiv.org/abs/2306.15626)).
+- NeurIPS'23: _LeanDojo: Theorem Proving with Retrieval-Augmented Language Models_ ([link](https://arxiv.org/abs/2306.15626)).
 - NeuRIPS'24: _Grammar-Aligned Decoding_ ([link](https://arxiv.org/abs/2405.21047)).
 - [Guy Van den Broeck](https://web.cs.ucla.edu/~guyvdb/), Prof at UCLA, has some papers around controlling LLMs: [Ctrl-G](https://arxiv.org/abs/2406.13892), [GeLaTo](https://proceedings.mlr.press/v202/zhang23g/zhang23g.pdf), [Semantic Probabilistic Layer](https://proceedings.neurips.cc/paper_files/paper/2022/hash/c182ec594f38926b7fcb827635b9a8f4-Abstract-Conference.html).
 - [Gabriel Poesia](https://gpoesia.com/), PhD student at Stanford, has some papers around LLMs for mathematical discovery, e.g., NeurIPS'24: _Learning Formal Mathematics From Intrinsic Motivation_ ([paper](https://arxiv.org/abs/2407.00695), [code](https://github.com/gpoesia/minimo)).
