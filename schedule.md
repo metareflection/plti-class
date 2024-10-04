@@ -95,9 +95,14 @@ Optional extra paper of the day (ICFP'22): _Aeneas: Rust Verification by Functio
 
 ### Thursday, October 10
 
-Dennis: Hoare logic and how to semi-automatically verify it using SMTs.
+Dennis leads a session on Hoare logic and how to semi-automatically verify it using SMTs.
 
-**TODO**: pick a paper of the day.
+Paper of the day (FM'23): _HHLPy: Practical Verification of Hybrid Systems using Hoare Logic_ ([PDF](https://arxiv.org/pdf/2210.17163), [code](https://github.com/bzhan/mars/tree/master/hhlpy))
+
+Pointers on Hoare Logic:
+- [CS152 Lecture Notes](https://groups.seas.harvard.edu/courses/cs152/2024sp/lectures/lec19-axiomatic.pdf)
+- [CACM'69: _An axiomatic basis for computer programming_ by C. A. R. Hoare](https://dl.acm.org/doi/abs/10.1145/363235.363259)
+- [_Fifty years of Hoare’s logic_](https://link.springer.com/article/10.1007/s00165-019-00501-3)
 
 ## Week 7
 
