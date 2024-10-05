@@ -108,9 +108,25 @@ Optional extra paper of the day (ICFP'22): _Aeneas: Rust Verification by Functio
 
 ### Tuesday, October 15
 
-Introductory session on multi-stage programming led by Cameron Wong, who will also discuss related ongoing research.
+Introductory session on multi-stage programming led by Prof. Nada Amin and guest Cameron Wong, who will also discuss related ongoing research.
 
 Paper of the day (JFP'19): _A SQL to C compiler in 500 lines of code_ ([PDF](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/sql-to-c-compiler-in-500-lines-of-code/C38B40C78B6A9C55232D4A850587FC64), [code](https://scala-lms.github.io/tutorials/query.html)).
+
+Projects using Scala/LMS:
+- LMS: Lightweight Modular Staging ([CACM'12](https://cacm.acm.org/research/lightweight-modular-staging), [tutorials](https://scala-lms.github.io/))
+- LMS-Verify ([POPL'17 PDF](http://lampwww.epfl.ch/~amin/pub/lms-verify.pdf), [code](https://github.com/namin/lms-verify))
+- Collapsing Towers of Interpreters ([POPL'18 PDF](http://lampwww.epfl.ch/~amin/pub/collapsing-towers.pdf), [code](http://popl18.namin.net))
+- Collapsing Towers for Side-Channel Security (Draft TBD, [code](https://github.com/namin/lms-koika))
+- GenSym ([ICSE'23 PDF](https://continuation.passing.style/static/papers/icse23.pdf), [code](https://github.com/Generative-Program-Analysis/GenSym))
+
+Multi-stage programming in other languages/systems:
+- [MetaOCaml](https://okmij.org/ftp/ML/MetaOCaml.html)
+- BuildIt in C++ ([CGO'21 PDF](https://intimeand.space/docs/buildit.pdf), [code](https://github.com/BuildIt-lang/buildit), [online demo](https://buildit.so/tryit/)) -- the lead Ajay Brahmakshatriya gives a **talk** at the [Harvard PL](https://pl.seas.harvard.edu/) seminar on **Friday, October  18 (2:00-3:15 in SEC 6.412)**
+
+Some PL theory of multi-stage programming:
+- [Two-level type theory (Google Scholar search)](https://scholar.google.com/scholar?hl=en&q=two-level+type+theory)
+- [λ-calculus λ°](https://dl.acm.org/doi/abs/10.1145/3011069): A Temporal Logic Approach to Binding-Time Analysis (Rowan Davies, 2017)
+
 
 ### Thursday, October 17 (Assignment 1 Due)
 
