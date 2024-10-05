@@ -87,7 +87,7 @@ The slides for this session are available [here](hw/pres.pdf).
 
 ### Tuesday, October 8
 
-Dennis leads a session on Hoare logic and how to semi-automatically verify it using SMTs.
+Dennis leads a session on Hoare logic and how to semi-automatically verify it via verification conditions.
 
 Paper of the day (FM'23): _HHLPy: Practical Verification of Hybrid Systems using Hoare Logic_ ([PDF](https://arxiv.org/pdf/2210.17163), [code](https://github.com/bzhan/mars/tree/master/hhlpy))
 
