@@ -126,7 +126,7 @@ Projects using Scala/LMS:
 Multi-stage programming in other languages/systems:
 - [MetaOCaml](https://okmij.org/ftp/ML/MetaOCaml.html)
 - BuildIt in C++ ([CGO'21 PDF](https://intimeand.space/docs/buildit.pdf), [code](https://github.com/BuildIt-lang/buildit), [online demo](https://buildit.so/tryit/)) -- the lead Ajay Brahmakshatriya gives a **talk** at the [Harvard PL](https://pl.seas.harvard.edu/) seminar on **Friday, October  18 (2:00-3:15 in SEC 6.412)**
-- [**staged-miniKanren**](https://github.com/namin/staged-miniKanren)
+- [**staged-miniKanren**](https://github.com/namin/staged-miniKanren) (Draft TBD)
 
 Some PL theory of multi-stage programming:
 - [Two-level type theory (Google Scholar search)](https://scholar.google.com/scholar?hl=en&q=two-level+type+theory)
