@@ -101,7 +101,7 @@ Pointers on Hoare Logic:
 Alex B. leads a session on Rust verification.
 
 System of the day: Verus ([code](https://github.com/verus-lang/verus), [playground](https://play.verus-lang.org/), [guide](https://verus-lang.github.io/verus/guide/), [VerusBench (hand-written examples)](https://github.com/secure-foundations/human-eval-verus/)). Recent papers:
-- SOSP'24: _Verus: A Practical Foundation for Systems Verification_ ([accepted draft in shepherding](https://github.com/verus-lang/paper-sosp24-artifact/blob/main/ae/paper-20240821-212701-e33099e.pdf))
+- SOSP'24: _Verus: A Practical Foundation for Systems Verification_ ([accepted draft in shepherding](https://github.com/verus-lang/paper-sosp24-artifact/blob/main/ae/paper-20240821-212701-e33099e.pdf), [code for case studies](https://verus-lang.github.io/paper-sosp24-artifact/case-studies))
 - OOPSLA'23: _Verus: Verifying Rust Programs using Linear Ghost Types_ ([PDF](https://www.andrew.cmu.edu/user/bparno/papers/verus-ghost.pdf)).
 
 Optional extra paper of the day (ICFP'22): _Aeneas: Rust Verification by Functional Translation_ ([PDF](https://dl.acm.org/doi/abs/10.1145/3547647), [code](https://github.com/AeneasVerif/aeneas)).
