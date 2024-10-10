@@ -139,7 +139,7 @@ Some PL theory of multi-stage programming:
 
 Alex C. leads a session on multi-stage programming.
 
-**TODO**: pick a paper of the day.
+Paper of the day (ICFP'22): [András Kovács](https://andraskovacs.github.io/), Staged Compilation With Two-Level Type Theory ([PDF](https://andraskovacs.github.io/pdfs/2ltt.pdf), [code](https://github.com/AndrasKovacs/staged), [appendix](https://andraskovacs.github.io/pdfs/2ltt_appendix.pdf))
 
 ## Week 8
 
