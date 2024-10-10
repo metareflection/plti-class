@@ -53,7 +53,7 @@ Preparation homework: dive into a specific technique, and be ready to share insi
 
 ### Tuesday, September 24
 
-Alvan leads a session on probabilstic programming.
+Alvan leads a session on probabilistic programming.
 
 Paper of the day (POPL'23): _ADEV: Sound Automatic Differentiation of Expected Values of Probabilistic Programs_ ([paper](https://dl.acm.org/doi/10.1145/3571198), [code](https://github.com/probcomp/adev)).
 
@@ -100,7 +100,7 @@ Pointers on Hoare Logic:
 
 Alex B. leads a session on Rust verification.
 
-System of the day: Verus ([code](https://github.com/verus-lang/verus), [playground](https://play.verus-lang.org/), [guide](https://verus-lang.github.io/verus/guide/)). Recent papers:
+System of the day: Verus ([code](https://github.com/verus-lang/verus), [playground](https://play.verus-lang.org/), [guide](https://verus-lang.github.io/verus/guide/), [VerusBench (hand-written examples)](https://github.com/secure-foundations/human-eval-verus/)). Recent papers:
 - SOSP'24: _Verus: A Practical Foundation for Systems Verification_ ([accepted draft in shepherding](https://github.com/verus-lang/paper-sosp24-artifact/blob/main/ae/paper-20240821-212701-e33099e.pdf)
 - OOPSLA'23: _Verus: Verifying Rust Programs using Linear Ghost Types_ ([PDF](https://www.andrew.cmu.edu/user/bparno/papers/verus-ghost.pdf)).
 
