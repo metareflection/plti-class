@@ -100,7 +100,7 @@ Pointers on Hoare Logic:
 
 Alex B. leads a session on Rust verification.
 
-System of the day: Verus ([code](https://github.com/verus-lang/verus)). Recent papers:
+System of the day: Verus ([code](https://github.com/verus-lang/verus), [playground](https://play.verus-lang.org/), [guide](https://verus-lang.github.io/verus/guide/)). Recent papers:
 - SOSP'24: _Verus: A Practical Foundation for Systems Verification_ ([accepted draft in shepherding](https://github.com/verus-lang/paper-sosp24-artifact/blob/main/ae/paper-20240821-212701-e33099e.pdf)
 - OOPSLA'23: _Verus: Verifying Rust Programs using Linear Ghost Types_ ([PDF](https://www.andrew.cmu.edu/user/bparno/papers/verus-ghost.pdf)).
 
