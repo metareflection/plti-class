@@ -145,13 +145,15 @@ Paper of the day (ICFP'22): [András Kovács](https://andraskovacs.github.io/), 
 
 ### Tuesday, October 22
 
-Daniel and Dashiell will lead a week on HoTT.
+Albert and Howard lead a session on algebraic effects.
 
-**TODO**: pick some reading homework. Also provide extra resources.
+**TODO**: pick a paper of the day.
 
 ### Thursday, October 24
 
-HoTT continued.
+Daniel and Dashiell lead a session on HoTT.
+
+**TODO**: pick some reading homework. Also provide extra resources.
 
 ## Week 9
 
