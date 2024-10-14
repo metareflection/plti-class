@@ -183,7 +183,7 @@ Saketh and Suki lead a session TBD.
 
 ### Tuesday, November 5
 
-Alice will lead a session. TBD: possibly at the intersection of linguistics and programming languages.
+TBD.
 
 ### Thursday, November 7
 
