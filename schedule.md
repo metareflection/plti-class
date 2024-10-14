@@ -185,6 +185,7 @@ Saketh and Suki lead a session TBD.
 
 TBD.
 
+
 ### Thursday, November 7
 
 Guest lecture by Kartik Chandra (MIT) around [memo](https://github.com/kach/memo),
