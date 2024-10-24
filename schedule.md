@@ -147,7 +147,7 @@ Paper of the day (ICFP'22): [András Kovács](https://andraskovacs.github.io/), 
 
 Albert and Howard lead a session on algebraic effects.
 
-**TODO**: pick a paper of the day.
+Paper of the day (POPL'17): _Do be do be do_ ([paper](https://arxiv.org/pdf/1611.09259), [code](https://github.com/frank-lang/frank)).
 
 ### Thursday, October 24
 
