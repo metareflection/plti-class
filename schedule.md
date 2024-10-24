@@ -153,7 +153,16 @@ Albert and Howard lead a session on algebraic effects.
 
 Daniel and Dashiell lead a session on HoTT.
 
-**TODO**: pick some reading homework. Also provide extra resources.
+Readings of the day:
+- Read Sections 2.1-2.4 + 2.10 of the [HoTT book](https://homotopytypetheory.org/book/) ([PDF](https://hott.github.io/book/hott-online.pdf.html)),
+- Peek at [Cubical Agda](https://dl.acm.org/doi/10.1145/3341691).
+
+Additional resources:
+- _Introduction to Homotopy Type Theory_ by Rĳke ([PDF](https://arxiv.org/pdf/2212.11082): an alternative to the HoTT book more focused on a bottom-up deriviation of concepts in mathematics within HoTT.
+- Videos by Emily Riehl, overviewing category theory behind HoTT:
+  [1](https://www.youtube.com/live/VdxdQiucJe8?si=RA47-3SM8nTjR5UC),
+  [2](https://youtu.be/XIYoI5j5Flo?si=PeiQLjid_MAuCtAJ),
+  [3](https://youtu.be/A6hXn6QCu0k?si=NQ_zBVsK_bCYeG2S).
 
 ## Week 9
 
