@@ -180,7 +180,7 @@ Saketh and Suki lead a session on LLMs and mathematical discovery.
 Paper of the day (NeurIPS'24):
 _Learning Formal Mathematics From Intrinsic Motivation_ by
 Gabriel Poesia, David Broman, Nick Haber and Noah D. Goodman
-([[arXiv](https://arxiv.org/abs/2407.00695)] [[Code](https://github.com/gpoesia/minimo)])
+([paper](https://arxiv.org/abs/2407.00695), [code](https://github.com/gpoesia/minimo))
 
 ## Week 10
 
