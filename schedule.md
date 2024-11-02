@@ -186,7 +186,9 @@ Gabriel Poesia, David Broman, Nick Haber and Noah D. Goodman
 
 ### Tuesday, November 5
 
-TBD.
+Guest lecture by William Byrd on [midoriKanren](https://github.com/webyrd/midoriKanren).
+
+Paper of the day: as a warm-up, read this programming pearl on _Quine Generation via Relational Interpreters_ ([PDF](http://webyrd.net/quines/quines.pdf)).
 
 
 ### Thursday, November 7
@@ -194,7 +196,7 @@ TBD.
 Guest lecture by Kartik Chandra (MIT) around [memo](https://github.com/kach/memo),
 a new probabilistic programming language for expressing computational cognitive models.
 
-Paper of the day: TBD.
+Paper of the day: shared draft on Ed. Feedback encouraged.
 
 ## Week 11
 
