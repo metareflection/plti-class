@@ -202,9 +202,9 @@ Paper of the day: shared draft on Ed. Feedback encouraged.
 
 ### Tuesday, November 12
 
-Alice leads a session on TBD.
+Alice leads a session.
 
-Paper of the day: TBD.
+Paper of the day (PLDI'24): _Bit Blasting Probabilistic Programs_ ([PDF](https://dl.acm.org/doi/pdf/10.1145/3656412), [code](https://github.com/Tractables/Dice.jl/tree/hybit)).
 
 ### Thursday, November 14
 
