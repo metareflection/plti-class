@@ -210,7 +210,7 @@ Paper of the day (PLDI'24): _Bit Blasting Probabilistic Programs_ ([PDF](https:/
 
 Wolfie leads a session on the [TACO](http://tensor-compiler.org/) tensor algebra compiler.
 
-Paper of the day: TBD. See [all project papers](http://tensor-compiler.org/publications.html).
+Paper of the day (OOPSLA'17): _The Tensor Algebra Compiler_ ([PDF](http://tensor-compiler.org/files/kjolstad-oopsla17-tensor-compiler.pdf)). See [all project papers](http://tensor-compiler.org/publications.html).
 
 ## Week 12
 
@@ -237,3 +237,8 @@ Thanksgiving.
 ### Tuesday, December 3
 
 Last day of class.
+
+Guest speaker McCoy Becker (MIT) will lead a session on probabilistic programming.
+
+Paper of the Day (PLDI'24): [_Probabilistic Programming with Programmable Variational Inference_](https://dl.acm.org/doi/10.1145/3656463)
+
