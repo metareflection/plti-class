@@ -216,11 +216,26 @@ Paper of the day (OOPSLA'17): _The Tensor Algebra Compiler_ ([PDF](http://tensor
 
 ### Tuesday, November 19
 
-Project presentations.
+Each student has 10 minutes to pitch their project and get feedback.
+The pitch should motivate, describe and situate the project and outline a plan for the rest of semester. What challenges do you anticipate? What milestones do you hope to achieve? How will you evaluate success? Feel free to structure your pitch to maximize feedback from the class.
+
+1. Alex C.
+2. Wolfie
+3. Albert
+4. Dennis
+5. Alice
+6. Suki
+7. Howard
 
 ### Thursday, November 21
 
-Project presentations.
+1. Dashiell
+2. Ulrik
+3. Daniel
+4. Matt
+5. Seakth
+6. Matthew
+7. Alvan
 
 ## Week 13
 
