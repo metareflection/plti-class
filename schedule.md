@@ -214,6 +214,8 @@ Paper of the day (OOPSLA'17): _The Tensor Algebra Compiler_ ([PDF](http://tensor
 
 ## Week 12
 
+### Student Presentations of their Ongoing Projects
+
 _Each student has **10 minutes** to pitch their project and get feedback.
 The pitch should motivate, describe and situate the project and outline a plan for the rest of semester. What challenges do you anticipate? What milestones do you hope to achieve? How will you evaluate success? Feel free to structure your pitch to maximize feedback from the class._
 
