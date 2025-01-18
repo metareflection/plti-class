@@ -235,7 +235,7 @@ The pitch should motivate, describe and situate the project and outline a plan f
 2. Ulrik
 3. Daniel
 4. Matt
-5. Seakth
+5. Saketh (postponed)
 6. Matthew
 7. Alvan
 
