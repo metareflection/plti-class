@@ -3,9 +3,9 @@ CS252R Advanced Topics in Programming Languages (Fall 2024)
 
 ## Running website locally
 
-See the [Github pages documentation](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) to install the required tools, including Jekyll.
+On mac, install Ruby with homebrew: `brew install ruby`.
 
-After installation, the quick shell commands I run on my mac are:
+After installation, the quick shell commands I run on my mac (each terminal session) are:
 - `export PATH="/opt/homebrew/opt/ruby/bin:$PATH"`
 - `bundle install`
 - `bundle exec jekyll serve`
