@@ -7,6 +7,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
+gem "csv"
 gem "jekyll", "~> 3.9.3"
 gem "jekyll-theme-cayman", "~> 0.2.0"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
